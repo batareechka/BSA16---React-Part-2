@@ -19,7 +19,7 @@ class UserFilter extends Component {
     this.props.changeFilterString(
         users.filter( (el, i, arr) => {
             if (str.length > 0)
-                return arr[i].name.match(str)
+                return arr[i].name.startsWith(str)
             else
                 return arr[i]
         })
