@@ -16,12 +16,15 @@ class UserItem extends Component {
         this.handleDelUser = this.handleDelUser.bind(this);
     }
     
-    handleDelUser() {
-        var id = this.props;
-        console.log(id);
-        console.log(this.state);
-        
-        // this.props.delUser(user);
+    handleDelUser(e) {
+        let { users } = this.props.stateFromReducer;
+        let id = e.target.getAttribute('data-id');
+
+        users.forEach((item, i, arr) => {
+            if(item.id == id) users.splice(i, 1);
+        })
+        this.props.delUser(users);
+     
     }
 
     render() {
@@ -29,9 +32,9 @@ class UserItem extends Component {
         const { users } = this.props.stateFromReducer;            
         return (
             (users.length > 0) ? <div>
-            {users.map( (users) => {
-                return <div key={users.id} id={users.id} className="user-item"> {users.name}
-                <button className="user-del-btn btn" onClick={this.handleDelUser}>Delete</button>
+            {users.map( (users, index) => {
+                return <div key={index} className="user-item">{users.name}
+                <button className="user-del-btn btn" data-id={users.id} onClick={this.handleDelUser}>Delete</button>
                 </div>
             })}
             

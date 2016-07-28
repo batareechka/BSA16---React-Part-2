@@ -26,7 +26,10 @@ export default function userReducer(state = initialState, action) {
 		}
 
 		case 'DELETE_USER': {
-
+				const { users } = action;
+			return Object.assign({}, state, {
+								users
+            })	
 		}
 
 		case 'CHANGE_NAME': {

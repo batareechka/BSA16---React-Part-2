@@ -36,13 +36,12 @@ class UserAdd extends Component {
 
 
     render() {
-        console.log(this.props.stateFromReducer);
         return (
             <div className="user-add">            
                 <h2 className="user-header">Add user</h2>
                 
                 <input ref="addInput" className="user-add-text control" onChange={this.handleChange} placeholder="Type name here"/>
-                <button className="user-add-btn btn" type="button" onClick={this.handleAddUser}>Save user</button>
+                <button className="user-add-btn btn" onClick={this.handleAddUser}>Save user</button>
             </div>
         )
     }
