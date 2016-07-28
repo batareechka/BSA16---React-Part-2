@@ -1,0 +1,114 @@
+#app {
+    width: 600px;
+    margin: 50px auto;
+}
+
+.control {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.control:focus {
+    outline: none;
+    border-color: rgba(92, 197, 219, .5);
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(92, 197, 219, .4);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(92, 197, 219, .4);
+    box-shadow: 0px 0px 14px 0px rgba(92, 197, 219, .4);
+}
+
+.btn {
+    padding: 11px 12px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: .3s background-color;
+    -moz-transition: .3s background-color;
+    -o-transition: .3s background-color;
+    transition: .3s background-color;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.user-storage {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    background-color: #f7f7f7;
+}
+
+.user-item {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-item:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.user-item:last-child {
+    border: none;
+}
+
+.user-name {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.user-del-btn {
+    float: right;
+    background-color: #D5393D;
+    color: #fff;
+}
+
+.user-del-btn:hover,
+.user-del-btn:focus {
+    background-color: #9B2D30;
+}
+
+.user-id {
+    /*display: none;*/
+}
+
+.user-add {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background-color: #f7f7f7;
+}
+
+.user-header {
+    font-size: 22px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.user-add-text {
+    margin-right: 20px;
+    width: 400px;
+}
+
+.user-add-btn {
+    float: right;
+    background-color: #2caa64;
+    color: #fff;
+    -webkit-transition: .3s background-color;
+    -moz-transition: .3s background-color;
+    -o-transition: .3s background-color;
+    transition: .3s background-color;
+}
+
+.user-add-btn:hover,
+.user-add-btn:focus {
+    background-color: #2e8B57;
+}
