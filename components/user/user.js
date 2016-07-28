@@ -6,6 +6,7 @@ import * as actions from "./actions/userActions";
 
 import UserItem from './userItem';
 import UserAdd from './userAdd';
+import UserFilter from './userFilter';
 import './user.css'
 
 
@@ -17,17 +18,13 @@ class User extends Component {
     //         idCounter: 0
     //     };
         
-         this.addUserParent = this.addUserParent.bind(this, name);
-     }
-    
-     addUserParent(self, name) {
-
      }
     
     render() {
         return (            
             <div>
-                <UserAdd/>        
+                <UserAdd />
+                <UserFilter />        
 
                 <div className="user-storage">
                     <h2 className="user-header">Users</h2>
@@ -52,15 +49,3 @@ class User extends Component {
 }
 
 export default User;
-
-// function mapDispatchToProps(dispatch) {
-//     return bindActionCreators(actions, dispatch);
-// }
-
-// function mapStateToProps(state) {
-//     return {
-//         stateFromReducer: state
-//     };
-// }
-// const UserConnected = connect(mapStateToProps, mapDispatchToProps)(User);
-// export default UserConnected;

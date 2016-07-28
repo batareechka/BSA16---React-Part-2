@@ -24,10 +24,9 @@ export function delUser(users) {
 	return action;
 }
 
-export function searchUser(users) {
-	console.log('idIn='+ id);
+export function changeFilterString(users) {
 	const action = {
-		type: 'SEARCH_USER',
+		type: 'FILTER',
 		users: users
 	};
 	return action;

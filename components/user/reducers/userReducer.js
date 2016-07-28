@@ -1,14 +1,5 @@
 const initialState = {
-	users: [
-	// {
-	// 	name: 'Роберt',
-	// 	id: 1
-	// },
-	// {
-	// 	name: 'Betty',
-	// 	id: 2
-	// }
-	],
+	users: [],
  	idCounter: 0,
  	name: ''
 };
@@ -38,6 +29,14 @@ export default function userReducer(state = initialState, action) {
 								name: name
             })								
 			}		
+
+			case 'FILTER': {
+			const {users} = action
+				return Object.assign({}, state, {
+								//filter: filter,
+								users: users
+            })								
+			}
 
 		default: {
 			return state;
