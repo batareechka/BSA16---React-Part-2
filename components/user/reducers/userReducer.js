@@ -18,10 +18,10 @@ export default function userReducer(state = initialState, action) {
 
 		case 'ADD_USER': {
 			 const {users, idCounter} = action;
-			 console.log(action);
 				return Object.assign({}, state, {
 								users,
-								idCounter: state.idCounter + 1
+								idCounter: state.idCounter + 1,
+								name: ''
             })								
 		}
 

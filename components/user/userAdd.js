@@ -17,15 +17,20 @@ class UserAdd extends Component {
     
      handleAddUser() {        
         let {users, idCounter, name} = this.props.stateFromReducer;
+        if (!name) return;
         let user = {
             name: name,
             id: idCounter + 1
-        }    
+        },
+        addInput = this.refs.addInput;
         users = [...users, user];    
           this.props.addUser({
             users,
             idCounter
         });     
+
+        addInput.value='';
+        addInput.focus();  
 
 
     }

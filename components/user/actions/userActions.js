@@ -2,7 +2,8 @@ export function addUser(addParametrs) {
 	const action = {
 		type: 'ADD_USER',		
 		users: addParametrs.users,
-		idCounter: addParametrs.idCounter
+		idCounter: addParametrs.idCounter,
+		name
 	};
 	return action;
 } 
