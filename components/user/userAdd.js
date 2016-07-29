@@ -7,9 +7,6 @@ import * as actions from "./actions/userActions";
 class UserAdd extends Component {  
      constructor(props){
          super(props);
-    //     this.state = {
-    //         name: ''
-    //     }
 
          this.handleAddUser = this.handleAddUser.bind(this);
          this.handleChange = this.handleChange.bind(this);
@@ -31,8 +28,6 @@ class UserAdd extends Component {
 
         addInput.value='';
         addInput.focus();  
-
-
     }
 
     handleChange(e) {

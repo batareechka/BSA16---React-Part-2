@@ -34,7 +34,6 @@ export default function userReducer(state = initialState, action) {
 			case 'FILTER': {
 			const {filterText} = action
 				return Object.assign({}, state, {
-								//filter: filter,
 								filterText: filterText
             })								
 			}

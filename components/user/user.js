@@ -12,12 +12,7 @@ import './user.css'
 
 class User extends Component {
      constructor() {
-         super();
-    //     this.state = {
-    //         users: [],
-    //         idCounter: 0
-    //     };
-        
+         super();        
      }
     
     render() {
