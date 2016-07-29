@@ -29,12 +29,14 @@ class UserItem extends Component {
 
     render() {
 
-        const { users } = this.props.stateFromReducer;            
+        const {users,filterText} = this.props.stateFromReducer; 
+        let filteredUsers = (!filterText) ? users: users.filter((el, i, arr) => arr[i].name.startsWith(filterText)); 
+        //const users = filteredUsers          
         return (
-            (users.length > 0) ? <div>
-            {users.map( (users, index) => {
-                return <div key={index} className="user-item">{users.name}
-                <button className="user-del-btn btn" data-id={users.id} onClick={this.handleDelUser}>Delete</button>
+            (filteredUsers) ? <div>
+            {filteredUsers.map( (filteredUsers, index) => {
+                return <div key={filteredUsers.id} className="user-item">{filteredUsers.name}
+                <button className="user-del-btn btn" data-id={filteredUsers.id} onClick={this.handleDelUser}>Delete</button>
                 </div>
             })}
             
@@ -58,9 +60,12 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
+    //const { users, filterText } = state
+    //let filtered = (!filterText) ? users: users.filter((el, i, arr) => arr[i].name.startsWith(filterText));
     return {
         stateFromReducer: state
-    };
+        //filteredUsers: filtered
+    }
 }
 const UserItemConnected = connect(mapStateToProps, mapDispatchToProps)(UserItem);
 export default UserItemConnected;

@@ -34,16 +34,6 @@ class User extends Component {
                     </div>
                  </div>
             </div>
-
-            //{
-
-               // this.state.users.map(function(el, index) {
-               //     return <UserItem key={index} user={el} delUser={this.delUser}></UserItem>;
-               // }, this)
-           //}
-           //          </div>
-           //      </div>
-           // </div>
         )
     }
 }

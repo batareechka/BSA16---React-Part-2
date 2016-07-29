@@ -13,23 +13,24 @@ class UserFilter extends Component {
    }
 
    handleFilterUser(e) {
-    let {users} = this.props.stateFromReducer; 
-    let str =  e.target.value;  
+    this.props.changeFilterString(e.target.value)
+    // let {users} = this.props.stateFromReducer; 
+    // let str =  e.target.value;  
 
-    this.props.changeFilterString(
-        users.filter( (el, i, arr) => {
-            if (str.length > 0)
-                return arr[i].name.startsWith(str)
-            else
-                return arr[i]
-        })
+    // this.props.changeFilterString(
+    //     users.filter( (el, i, arr) => {
+    //         if (str.length > 0)
+    //             return arr[i].name.startsWith(str)
+    //         else
+    //             return arr[i]
+    //     })
 
-        )
+    //     )
 }
 
 
 render() {
-    const {search } = this.props;
+    //const { filteredUsers, filteredText } = this.props;
 
     return (
         <div className="filter-container">
@@ -45,8 +46,11 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
+    //const { users, filterText } = state
+    //let filtered = (!filterText) ? users: users.filter((el, i, arr) => arr[i].name.startsWith(filterText));
     return {
-        stateFromReducer: state
+        stateFromReducer: state,
+        //filteredUsers: filtered
     }
 }
 const UserFilerConnected = connect(mapStateToProps, mapDispatchToProps)(UserFilter);

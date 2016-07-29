@@ -1,7 +1,8 @@
 const initialState = {
 	users: [],
  	idCounter: 0,
- 	name: ''
+ 	name: '',
+ 	filterText: ''
 };
 
 export default function userReducer(state = initialState, action) {
@@ -31,10 +32,10 @@ export default function userReducer(state = initialState, action) {
 			}		
 
 			case 'FILTER': {
-			const {users} = action
+			const {filterText} = action
 				return Object.assign({}, state, {
 								//filter: filter,
-								users: users
+								filterText: filterText
             })								
 			}
 

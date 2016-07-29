@@ -24,10 +24,10 @@ export function delUser(users) {
 	return action;
 }
 
-export function changeFilterString(users) {
+export function changeFilterString(filterText) {
 	const action = {
 		type: 'FILTER',
-		users: users
+		filterText: filterText
 	};
 	return action;
 }
