@@ -1,5 +1,5 @@
 var Projects = new Schema({
-  Users: [{
+  Users: [{                           //уже есть
     userId :  Schema.User.ObjectId,
     required: true
   }],
@@ -18,58 +18,66 @@ var Projects = new Schema({
     type: String
   },
 
-  Screenshots - ????
+  Screenshots {
+    ????
+  },
 
-  TimeBegin:{
+  TimeBegin: {
     type: Date,
     required:true
   },
-  TimeEnd:{
+
+  TimeEnd: {
     type: Date,
     required:true
   },
-  Tags:[{
+
+  Tags:[{       //теги могут выбираться из уже существующих???
    type: String
  }],
 
- Stage:{
+  Stage: {
   stage :  Schema.StagesScope.ObjectId,
-}
+  }
 });
 
 
 var Technology = new Schema({
-    Name:{
-        type: String,
-        required:true
-    },
-    Image:{ ?????
-    }
+  Name:{
+    type: String,
+    required:true
+  },
 
-    TechnologyScope: {      //Web, Mobile, Desktop, Backend как вынести справочником?
+  Image:{
+    ?????
+  }
+
+    TechnologyScope: {      //Web, Mobile, Desktop, Backend вынести справочником?
       type: Schema.TechnologiesScope.ObjectId,,
       required:true
     }
-});
+  });
 
 
 var TechnologiesScope = new Schema({
-    Name:{
-        type: String,
-        required:true
-    }
+  Name:{
+    type: String,
+    required:true
+  }
 });
 
 
 var StagesScope = new Schema({ //In progress, Estimated, Discussed
-    Name:{
-        type: String,
-        required:true
-    },
-    Color:{
-        type: String,
-    },
-    Image: {???
+  Name:{
+    type: String,
+    required:true
+  },
 
-    }
+  Color:{
+    type: String,
+  },
+
+  Image: {
+    ???
+  }
 });
